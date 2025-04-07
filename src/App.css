@@ -1,0 +1,199 @@
+/* Light Mode Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e8eff5, #d0dae6);
+  transition: background-color 0.3s ease;
+}
+
+.App {
+  max-width: 500px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 14px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(7px);
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 10px rgba(92, 107, 192, 0.6);
+}
+
+button {
+  background: linear-gradient(135deg, #5a82eb, #0044cc);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 3px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #4a72d9, #003bb5);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.6);
+  margin-bottom: 12px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  backdrop-filter: blur(7px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+li span {
+  flex: 1;
+  cursor: pointer;
+}
+
+li button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  background: linear-gradient(135deg, #ff5252, #d60000);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+li button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #e04545, #bb0000);
+}
+
+li button.edit {
+  background: linear-gradient(135deg, #4caf50, #007d34);
+}
+
+li button.edit:hover {
+  background: linear-gradient(135deg, #429844, #006b2e);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode Overrides */
+body.dark {
+  background: linear-gradient(135deg, #181818, #232323);
+  color: #e5e5e5;
+}
+
+.dark-mode {
+  background: rgba(25, 25, 25, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+.dark-mode h1 {
+  color: #e5e5e5;
+}
+
+.dark-mode input[type="text"] {
+  background: rgba(50, 50, 50, 0.7);
+  color: white;
+}
+
+.dark-mode input[type="text"]:focus {
+  box-shadow: 0 0 10px rgba(159, 168, 218, 0.7);
+}
+
+.dark-mode button {
+  background: linear-gradient(135deg, #596eff, #2d3fff);
+}
+
+.dark-mode button:hover {
+  background: linear-gradient(135deg, #4859e0, #1f32ff);
+}
+
+.dark-mode li {
+  background: rgba(40, 40, 40, 0.9);
+}
+
+/* Toggle Button */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #5a82eb, #0044cc);
+  transition: all 0.3s ease;
+}
+
+body.dark .toggle-btn {
+  background: linear-gradient(135deg, #333, #222);
+}
+
+.toggle-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+
+body.dark footer {
+  background: rgba(25, 25, 25, 0.85);
+  color: #e5e5e5;
+}
